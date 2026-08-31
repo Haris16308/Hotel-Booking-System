@@ -1,0 +1,896 @@
+/* =====================================================
+   STAYNEST - LUXURY HOTEL WEBSITE
+   COMPLETE HOME PAGE CSS
+===================================================== */
+
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6f0;
+    color: #172331;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+
+    background: #071b2d;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 6%;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* LOGO + BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* BRAND TEXT */
+
+.brand-text {
+    line-height: 1;
+}
+
+.brand-text h1 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+}
+
+.brand-text p {
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d9b65c;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d9b65c;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   HERO SLIDESHOW
+===================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+
+    background: #071b2d;
+}
+
+
+/* SLIDES CONTAINER */
+
+.hero-slides {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* INDIVIDUAL SLIDE */
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 1.2s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+
+/* HERO IMAGES */
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+
+    transform: scale(1.02);
+}
+
+
+/* DARK OVERLAY */
+
+.hero-dark-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 15, 27, 0.78),
+            rgba(3, 15, 27, 0.35),
+            rgba(3, 15, 27, 0.58)
+        );
+
+    z-index: 2;
+}
+
+
+/* HERO CONTENT */
+
+.hero-overlay {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    color: white;
+}
+
+
+/* SMALL GOLD TITLE */
+
+.hero-small {
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+}
+
+
+/* MAIN HERO TITLE */
+
+.hero-overlay h2 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    margin-bottom: 5px;
+
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* MUMBAI */
+
+.hero-overlay h3 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 650px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: #d9b65c;
+
+    color: #102335;
+
+    border: 1px solid #d9b65c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+
+    color: #d9b65c;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.intro-section {
+    background: #f8f6f0;
+
+    padding: 110px 6%;
+}
+
+.intro-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* GOLD LABEL */
+
+.section-label {
+    color: #b08a32;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+/* INTRO HEADING */
+
+.intro-content h2 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+/* INTRO TEXT */
+
+.intro-content p:not(.section-label) {
+    color: #626262;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 12px;
+}
+
+
+/* GOLD BUTTON */
+
+.gold-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 30px;
+
+    background: #d9b65c;
+
+    color: #102335;
+
+    border: 1px solid #d9b65c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.gold-button:hover {
+    background: #102335;
+
+    color: #d9b65c;
+}
+
+
+/* =====================================================
+   HIGHLIGHTS SECTION
+===================================================== */
+
+.highlights-section {
+    background: #ffffff;
+
+    padding: 110px 6%;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    max-width: 800px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(40px, 5vw, 60px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* HIGHLIGHT GRID */
+
+.highlight-grid {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* HIGHLIGHT CARD */
+
+.highlight-card {
+    background: #fbfaf7;
+
+    border: 1px solid #e5dfd0;
+
+    padding: 45px 32px;
+
+    text-align: center;
+
+    transition: 0.4s ease;
+
+    position: relative;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* GOLD ICON */
+
+.highlight-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d9b65c;
+
+    border-radius: 50%;
+
+    color: #d9b65c;
+
+    font-size: 20px;
+}
+
+
+/* CARD TITLE */
+
+.highlight-card h3 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    margin-bottom: 12px;
+}
+
+
+/* CARD TEXT */
+
+.highlight-card p {
+    color: #6b6b6b;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HOME CTA
+===================================================== */
+
+.home-cta {
+    min-height: 470px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(4, 18, 30, 0.80),
+            rgba(4, 18, 30, 0.88)
+        ),
+        url("images/taj-night.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+
+/* CTA CONTENT */
+
+.cta-content {
+    max-width: 750px;
+}
+
+
+/* CTA LABEL */
+
+.cta-content .hero-small {
+    color: #d9b65c;
+
+    margin-bottom: 18px;
+}
+
+
+/* CTA HEADING */
+
+.cta-content h2 {
+    color: #ffffff;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 6vw, 72px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+
+/* CTA DESCRIPTION */
+
+.cta-content p:not(.hero-small) {
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #071b2d;
+
+    color: #ffffff;
+
+    padding: 45px 6% 25px;
+}
+
+
+/* FOOTER TOP */
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand h2 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    color: #cccccc;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #dddddd;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d9b65c;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 30px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaaaaa;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 12px 4%;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        height: 570px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 60px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+    .intro-section,
+    .highlights-section {
+        padding: 80px 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 75px;
+
+        padding: 10px 4%;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-text h1 {
+        font-size: 25px;
+    }
+
+    .brand-text p {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        height: 520px;
+    }
+
+    .hero-overlay {
+        padding: 20px 15px;
+    }
+
+    .hero-small {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 48px;
+    }
+
+    .hero-overlay h3 {
+        font-size: 24px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .intro-section,
+    .highlights-section {
+        padding: 70px 5%;
+    }
+
+    .intro-content h2,
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .highlight-card {
+        padding: 35px 25px;
+    }
+
+    .home-cta {
+        min-height: 400px;
+    }
+
+    .footer {
+        padding: 35px 5% 20px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}

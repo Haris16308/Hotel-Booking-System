@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    background: #071b2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 6%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-box {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #d9b65c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+}
+
+.logo h2 {
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d9b65c;
+}
+
+
+/* ================= HERO ================= */
+
+.contact-hero {
+    background: #f5f1e8;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.contact-hero p {
+    color: #b08a32;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    color: #10283d;
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.gold-line {
+    width: 100px;
+    height: 2px;
+    background: #d9b65c;
+    margin: 0 auto 22px;
+}
+
+.contact-hero span {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 75px;
+}
+
+
+/* ================= CONTACT INFO ================= */
+
+.small-title {
+    color: #b08a32;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.contact-info h2 {
+    color: #10283d;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 600;
+}
+
+.small-gold-line {
+    width: 55px;
+    height: 2px;
+    background: #d9b65c;
+    margin: 22px 0;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 430px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e4dfd2;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border: 1px solid #d9b65c;
+    color: #b08a32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.info-item h3 {
+    color: #10283d;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ================= FORM ================= */
+
+.contact-form {
+    background: #faf8f3;
+    padding: 42px;
+    border: 1px solid #e4dfd2;
+}
+
+.contact-form h2 {
+    color: #10283d;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 12px 0 30px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d8d2c8;
+    background: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #b08a32;
+}
+
+.input-box textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    background: #b08a32;
+    color: white;
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #10283d;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #071b2d;
+    color: white;
+    padding: 45px 6% 25px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-box {
+    width: 180px;
+    height: auto;
+    display: block;
+    display-fit:contain;
+}
+
+.footer-logo h2 {
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    display: block;
+    color: #ddd;
+    font-size: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 28px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #d9b65c;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.social a {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #d4af37;
+    text-decoration: none;
+
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #d4af37;
+    color: #071426;
+    transform: translateY(-4px);
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-hero h1 {
+        font-size: 45px;
+    }
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+}
+
+/* ================================
+   STAYNEST LOGO
+================================ */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ================================
+   FOOTER LOGO
+================================ */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* Remove old text/logo styling */
+.logo-box,
+.footer-logo-box {
+    display: none;
+}
+
+.logo h2,
+.logo span,
+.footer-logo h2,
+.footer-logo span {
+    display: none;
+}
+
+/* ================================
+   NAVBAR LOGO + BRAND TEXT
+================================ */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo .brand-text h2 {
+    margin: 0;
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo .brand-text p {
+    margin: 5px 0 0;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   REMOVE OLD LOGO BOX
+================================ */
+
+.logo-box {
+    display: none;
+}
+
+
+/* ================================
+   FOOTER LOGO
+================================ */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.footer-logo .brand-text h2 {
+    margin: 0;
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.footer-logo .brand-text p {
+    margin: 5px 0 0;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+}

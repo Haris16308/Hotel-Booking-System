@@ -1,0 +1,579 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6f0;
+    color: #172536;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    background: #071b2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-text h2 {
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-text span {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d9b65c;
+}
+
+.book-btn {
+    color: #071b2d;
+    background: #d9b65c;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.book-btn:hover {
+    background: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.services-hero {
+    min-height: 480px;
+
+    background:
+        linear-gradient(
+            rgba(4, 17, 29, 0.68),
+            rgba(4, 17, 29, 0.78)
+        ),
+        url("images/taj-exterior.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-content > p {
+    color: #d9b65c;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 7vw, 85px);
+    font-weight: 600;
+    line-height: 0.95;
+    margin-bottom: 22px;
+}
+
+.gold-line {
+    width: 90px;
+    height: 2px;
+    background: #d9b65c;
+    margin: 0 auto 25px;
+}
+
+.hero-content span {
+    color: #eee;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+    padding: 90px 5%;
+    background: #f8f6f0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-heading > p {
+    color: #b08a32;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    color: #10283d;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.small-gold-line {
+    width: 55px;
+    height: 2px;
+    background: #d9b65c;
+    margin: 22px auto 0;
+}
+
+
+/* =========================
+   SERVICES GRID
+========================= */
+
+.services-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+    min-height: 320px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    text-align: center;
+
+    padding: 35px 28px;
+
+    border: 1px solid #d9b65c;
+    border-radius: 8px;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.4s ease;
+}
+
+
+/* DARK OVERLAY */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(4, 17, 29, 0.95),
+            rgba(4, 17, 29, 0.45),
+            rgba(4, 17, 29, 0.15)
+        );
+
+    z-index: 1;
+
+    transition: 0.4s ease;
+}
+
+
+/* HOVER OVERLAY */
+
+.service-card:hover::before {
+    background:
+        linear-gradient(
+            to top,
+            rgba(4, 17, 29, 0.97),
+            rgba(4, 17, 29, 0.60),
+            rgba(4, 17, 29, 0.30)
+        );
+}
+
+
+/* CARD CONTENT */
+
+.service-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   SERVICE IMAGES
+========================= */
+
+.service-card:nth-child(1) {
+    background-image: url("images/room.jpg");
+}
+
+.service-card:nth-child(2) {
+    background-image: url("images/dining.jpg");
+}
+
+.service-card:nth-child(3) {
+    background-image: url("images/spa.jpg");
+}
+
+.service-card:nth-child(4) {
+    background-image: url("images/concierge.jpg");
+}
+
+.service-card:nth-child(5) {
+    background-image: url("images/airport.jpg");
+}
+
+.service-card:nth-child(6) {
+    background-image: url("images/housekeeping.jpg");
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon {
+    width: 62px;
+    height: 62px;
+
+    border: 1px solid #d9b65c;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #d9b65c;
+    background: rgba(7, 27, 45, 0.75);
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+
+    transition: 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    background: #d9b65c;
+    color: #071b2d;
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.service-card h3 {
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #f1f1f1;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    max-width: 330px;
+}
+
+
+/* GOLD LINE INSIDE CARD */
+
+.service-card p::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 2px;
+
+    background: #d9b65c;
+
+    margin: 15px auto 0;
+}
+
+
+/* CARD HOVER */
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071b2d;
+    color: white;
+    padding: 45px 6% 25px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    color: #d9b65c;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.footer-logo span {
+    display: block;
+    color: #ddd;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d9b65c;
+}
+
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #d9b65c;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #d9b65c;
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #d9b65c;
+    color: #071b2d;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    padding-top: 20px;
+    margin-top: 20px;
+
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .book-btn {
+        display: none;
+    }
+
+    .services-hero {
+        min-height: 430px;
+    }
+
+    .services-section {
+        padding: 70px 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 300px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}

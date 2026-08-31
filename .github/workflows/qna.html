@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Q&A | StayNest</title>
+
+    <link rel="stylesheet" href="qna.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="StayNest Logo">
+
+            <div class="logo-text">
+                <h2>STAYNEST</h2>
+                <span>Find. Book. Stay.</span>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html">Services</a>
+            <a href="qna.html" class="active">Q&A</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="rooms.html" class="book-btn">BOOK NOW</a>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="qna-hero">
+
+        <div class="hero-content">
+
+            <p>FREQUENTLY ASKED</p>
+
+            <h1>Questions</h1>
+
+            <div class="gold-line"></div>
+
+            <span>
+                Everything you need to know about your stay at StayNest.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Q&A SECTION -->
+    <section class="qna-section">
+
+        <div class="section-heading">
+
+            <p>NEED TO KNOW</p>
+
+            <h2>How Can We Help?</h2>
+
+            <div class="small-gold-line"></div>
+
+        </div>
+
+
+        <div class="faq-container">
+
+
+            <div class="faq-item">
+
+                <div class="faq-question">
+                    <h3>What time is check-in and check-out?</h3>
+                    <span>+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Check-in starts at 2:00 PM and check-out is until
+                        12:00 PM. Early check-in and late check-out are
+                        subject to availability.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-question">
+                    <h3>Do you provide airport pickup?</h3>
+                    <span>+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes, StayNest provides comfortable airport transfer
+                        services. You can contact our team to arrange your
+                        pickup in advance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-question">
+                    <h3>Can I cancel my booking?</h3>
+                    <span>+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes, booking cancellation is available according
+                        to the cancellation policy applicable to your
+                        reservation.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-question">
+                    <h3>Is breakfast included in the room price?</h3>
+                    <span>+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Breakfast availability depends on the room package
+                        selected during your booking.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-question">
+                    <h3>Do you offer free Wi-Fi?</h3>
+                    <span>+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes, complimentary Wi-Fi is available for guests
+                        throughout the hotel.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CONTACT CTA -->
+        <div class="contact-cta">
+
+            <p>STILL HAVE QUESTIONS?</p>
+
+            <h2>We're Here to Help</h2>
+
+            <a href="contact.html">CONTACT US</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+
+            <img src="logo.png" alt="StayNest Logo">
+
+            <div>
+                <h2>STAYNEST</h2>
+                <span>Find. Book. Stay.</span>
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html">Services</a>
+            <a href="qna.html">Q&A</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="social">
+
+            <a href="mailto:staynest45@gmail.com">✉</a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=The+Taj+Mahal+Palace+Apollo+Bunder+Mumbai"
+               target="_blank">⌖</a>
+
+            <a href="https://wa.me/919162440600"
+               target="_blank">☎</a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 StayNest. All Rights Reserved.
+        </p>
+
+    </footer>
+<script>
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(question => {
+
+        question.addEventListener("click", () => {
+
+            const faqItem = question.parentElement;
+
+            faqItem.classList.toggle("active");
+
+        });
+
+    });
+</script>
+
+</body>
+</html>

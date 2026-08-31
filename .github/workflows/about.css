@@ -1,0 +1,809 @@
+/* =========================
+   STAYNEST ABOUT PAGE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f6f0;
+    color: #172536;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.about-navbar {
+    width: 100%;
+    min-height: 88px;
+    background: #071b2d;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 6%;
+}
+
+.about-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-logo-section img {
+    width: 68px;
+    height: 76px;
+    object-fit: contain;
+}
+
+.about-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-brand-text h1 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.about-brand-text p {
+    color: white;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    margin-top: 6px;
+}
+
+
+/* NAV LINKS */
+
+.about-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.about-nav-links a:hover,
+.about-nav-links a.active {
+    color: #d9b65c;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+    width: 100%;
+    min-height: 560px;
+
+    background:
+        linear-gradient(
+            rgba(4, 17, 29, 0.58),
+            rgba(4, 17, 29, 0.80)
+        ),
+        url("images/taj-exterior.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.about-hero-overlay {
+    max-width: 950px;
+}
+
+.gold-small {
+    color: #d9b65c;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.about-hero h2 {
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 8vw, 95px);
+
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+    color: #eeeeee;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.hero-subtitle strong {
+    color: #d9b65c;
+}
+
+
+/* =========================
+   OUR STORY
+========================= */
+
+.about-story {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 120px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.story-image {
+    position: relative;
+    padding: 15px 15px 0 0;
+}
+
+.story-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90%;
+    height: 90%;
+
+    border: 1px solid #d9b65c;
+
+    left: 35px;
+    top: 35px;
+
+    z-index: 0;
+}
+
+.story-image img {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 560px;
+
+    object-fit: cover;
+}
+
+.story-content {
+    padding: 10px 0;
+}
+
+.section-label {
+    color: #b08a32;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 16px;
+}
+
+.story-content h2 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5vw, 65px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.story-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 2px;
+
+    background: #d9b65c;
+
+    margin-top: 23px;
+}
+
+.story-content p:not(.section-label) {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 17px;
+}
+
+.gold-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 28px;
+
+    background: #d9b65c;
+
+    color: #071b2d;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.gold-button:hover {
+    background: #071b2d;
+    color: white;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-section {
+    width: 100%;
+
+    background: #071b2d;
+
+    padding: 115px 6%;
+}
+
+.section-heading {
+    max-width: 850px;
+
+    text-align: center;
+
+    margin: 0 auto 65px;
+}
+
+.section-heading .section-label {
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5vw, 65px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-bottom: 22px;
+}
+
+.section-heading > p:last-child {
+    color: #cfcfcf;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* EXPERIENCE CARDS */
+
+.experience-grid {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.experience-card {
+    background: white;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.experience-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h3 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   WHY STAYNEST
+========================= */
+
+.why-section {
+    width: 100%;
+
+    background: #f8f6f0;
+
+    padding: 115px 6%;
+}
+
+.why-section .section-heading h2 {
+    color: #10283d;
+}
+
+.why-section .section-heading > p:last-child {
+    color: #666;
+}
+
+.why-grid {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.why-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    min-height: 280px;
+
+    border: 1px solid #e5dfd2;
+
+    transition: 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+.why-number {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+}
+
+.why-card h3 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    margin: 15px 0;
+}
+
+.why-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.about-gallery {
+    width: 100%;
+
+    background: white;
+
+    padding: 115px 6%;
+}
+
+.gallery-heading {
+    max-width: 850px;
+
+    text-align: center;
+
+    margin: 0 auto 60px;
+}
+
+.gallery-heading h2 {
+    color: #10283d;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.gallery-heading p:last-child {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* GALLERY GRID */
+
+.gallery-grid {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 250px;
+
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+
+    filter: brightness(0.85);
+}
+
+
+/* BIG IMAGE */
+
+.gallery-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/* TALL IMAGE */
+
+.gallery-grid img:nth-child(2) {
+    grid-row: span 2;
+}
+
+
+/* LAST IMAGE */
+
+.gallery-grid img:nth-child(7) {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   BRAND SECTION
+========================= */
+
+.about-brand {
+    width: 100%;
+
+    background: #071b2d;
+
+    text-align: center;
+
+    padding: 85px 20px;
+}
+
+.about-brand img {
+    width: 80px;
+    height: 90px;
+
+    object-fit: contain;
+
+    margin: 0 auto 15px;
+}
+
+.about-brand h2 {
+    color: #d9b65c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    letter-spacing: 4px;
+}
+
+.about-brand p {
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-top: 6px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .about-nav-links {
+        gap: 20px;
+    }
+
+    .about-story {
+        gap: 55px;
+    }
+
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .about-navbar {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 15px 5%;
+    }
+
+    .about-logo-section img {
+        width: 58px;
+        height: 65px;
+    }
+
+    .about-brand-text h1 {
+        font-size: 27px;
+    }
+
+    .about-nav-links {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+    .about-nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .about-hero {
+        min-height: 450px;
+
+        padding: 60px 20px;
+    }
+
+    .about-hero h2 {
+        font-size: 55px;
+    }
+
+    .gold-small {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+
+    /* STORY */
+
+    .about-story {
+        grid-template-columns: 1fr;
+
+        padding: 75px 6%;
+
+        gap: 50px;
+    }
+
+    .story-image img {
+        height: 420px;
+    }
+
+    .story-image::after {
+        left: 25px;
+        top: 25px;
+    }
+
+    .story-content h2 {
+        font-size: 48px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-section {
+        padding: 80px 6%;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card img {
+        height: 270px;
+    }
+
+
+    /* WHY */
+
+    .why-section {
+        padding: 80px 6%;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GALLERY */
+
+    .about-gallery {
+        padding: 80px 5%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: 180px;
+
+        gap: 10px;
+    }
+
+    .gallery-grid img:first-child {
+        grid-column: span 2;
+
+        grid-row: span 2;
+    }
+
+    .gallery-grid img:nth-child(2) {
+        grid-row: span 1;
+    }
+
+    .gallery-grid img:nth-child(7) {
+        grid-column: span 2;
+    }
+
+
+    /* BRAND */
+
+    .about-brand {
+        padding: 65px 20px;
+    }
+}
